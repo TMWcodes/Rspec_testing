@@ -1,13 +1,13 @@
 require --'./lib/card'
 
 describe Card do
-    it 'has a type' do
-        #set up
-        card = Card.new('Ace of spades')
-        #execute
-            #method card.type
-            expect(card.type).to eq('Ace of spades')
-        #verify
-            #result = Ace of spaces
+    it 'has a rank' do
+        card = Card.new('Ace', 'Spades')
+            expect(card.rank).to eq('Ace')
+    end
+
+    it 'has a suit' do
+        card = Card.new('Ace', 'Spades')
+            expect(card.suit).to eq ('Spades')
     end
 end
