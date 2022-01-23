@@ -1,6 +1,10 @@
 require --'./lib/card'
 
 describe Card do
+before do
+   card = Card.new('Ace', 'Spades')
+end
+
     it 'has a rank' do
         card = Card.new('Ace', 'Spades')
             expect(card.rank).to eq('Ace')
