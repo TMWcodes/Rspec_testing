@@ -1,17 +1,15 @@
 require --'./lib/card'
 
 describe Card do
-before do
-   card = Card.new('Ace', 'Spades')
-end
+   let(:card) {Card.new('Ace', 'Spades')}
 
     it 'has a rank' do
-        card = Card.new('Ace', 'Spades')
-            expect(card.rank).to eq('Ace')
+        expect(card.rank).to eq('Ace')
+        card.rank = 'queen'
+        expect(card.rank).to eq('queen')
     end
 
     it 'has a suit' do
-        card = Card.new('Ace', 'Spades')
-            expect(card.suit).to eq ('Spades')
+       expect(card.suit).to eq ('Spades')
     end
 end
