@@ -8,7 +8,7 @@ describe '#Programming_language' do
     end
 
     context 'with no argument' do
-        let(:language) {Programming_language.new}
+        let(:language) {Programming_language.new} # uses default (in lib/file)
         it 'should default to ruby' do
     expect(language.name).to eq('Ruby')
         end

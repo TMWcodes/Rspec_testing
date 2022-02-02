@@ -11,6 +11,6 @@ let(:my_hash) { {} }
     end
 
     it 'is isoloated between examples' do
-        expect(subject.length).to eq(0)
+        expect(subject.length).to eq(0) # new example new hash
     end
 end
