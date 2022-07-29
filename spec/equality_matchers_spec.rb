@@ -38,3 +38,5 @@ describe 'equality matchers' do
 end
 
 #eq and eql
+# equal and be
+#equality vs identity
