@@ -18,6 +18,23 @@ describe 'equality matchers' do
             expect(b).to eql(3)
         end
     end
+    describe 'equal matcher and be matcher' do
+        let(:c) {[1, 2, 3]}
+        let(:d) {[1, 2, 3]}
+        let(:e) { c }
+         
+        it 'cares about object identity' do
+            expect(c).to eq(d)
+            expect(c).to eq(d)
+
+            expect(c).to equal(e)
+            expect(c).to be(e)
+
+            expect(c).not_to equal(d)
+            expect(c).not_to equal([1, 2, 3])
+
+        end
+    end
 end
 
 #eq and eql
